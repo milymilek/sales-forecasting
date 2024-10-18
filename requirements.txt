@@ -3,3 +3,4 @@ matplotlib==3.9.2
 ipykernel==6.29.5
 torch==2.4.1
 scikit-learn==1.5.2
+pyarrow==17.0.0
