@@ -25,9 +25,6 @@ def kfold_timeseries_split(
         yield timeseries_split(df, i, col, continuous=False)
 
 
-def aggregate_monthly_sales_sum() -> pd.DataFrame: ...
-
-
 def build_submission_df(evaluation_df: pd.DataFrame, save_path: None | str = None) -> pd.DataFrame:
     assert all(_ in list(evaluation_df.columns) for _ in ("shop_id", "item_id", "item_cnt_month"))
 
