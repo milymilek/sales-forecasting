@@ -1,6 +1,10 @@
 import pandas as pd
 
 
+def col_name(prefix: str, iter: list[int]):
+    return [f"{prefix}_{i}" for i in iter]
+
+
 def build_shops_features(df: pd.DataFrame) -> pd.DataFrame:
     translation_map = {
         "!Якутск Орджоникидзе, 56 фран": "Yakutsk Ordzhonikidze, 56 Franchise",
