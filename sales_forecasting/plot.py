@@ -5,7 +5,9 @@ import matplotlib.pyplot as plt
 import pandas as pd
 
 
-def plot_timeseries(df: pd.DataFrame, plt_rows: int = 10, plt_cols: int = 2, rand: bool = False, pred_col: str | None = None) -> None:
+def plot_timeseries(
+    df: pd.DataFrame, plt_rows: int = 10, plt_cols: int = 2, rand: bool = False, pred_col: str | None = None, save_path: str | None = None
+) -> None:
     fig, ax = plt.subplots(plt_rows, plt_cols, figsize=(20, 3 * plt_rows))
 
     cols = ["date_block_num", "shop_id", "item_id", "item_cnt_month"]
@@ -39,6 +41,8 @@ def plot_timeseries(df: pd.DataFrame, plt_rows: int = 10, plt_cols: int = 2, ran
         ax[row, col].legend()
         ax[row, col].grid()
     plt.tight_layout()
+    if save_path is not None:
+        plt.savefig(save_path)
     plt.show()
 
 
