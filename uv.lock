@@ -1414,6 +1414,20 @@ wheels = [
 ]
 
 [[package]]
+name = "pygad"
+version = "3.3.1"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "cloudpickle" },
+    { name = "matplotlib" },
+    { name = "numpy" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e3/63/60943b5036679952134755f5c9e17053b990307053a746410e88f090c881/pygad-3.3.1.tar.gz", hash = "sha256:4291c4e23912684653ed38331f86bd4611715d6068cfaa3363d9039f2fb79259", size = 82326 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/f3/55/a3ed3b7aba89bbb078b550f13a5dda18ec8b0e01ac6b656c1a6874151d4f/pygad-3.3.1-py3-none-any.whl", hash = "sha256:b95ac726fa87ebd32399ee25c754e8aa85c3b3b5bf015265b5619f619bebb1f1", size = 84137 },
+]
+
+[[package]]
 name = "pygments"
 version = "2.18.0"
 source = { registry = "https://pypi.org/simple" }
@@ -1629,6 +1643,7 @@ dependencies = [
     { name = "optuna" },
     { name = "pandas" },
     { name = "pyarrow" },
+    { name = "pygad" },
     { name = "scikit-learn" },
     { name = "seaborn" },
     { name = "statsforecast" },
@@ -1646,6 +1661,7 @@ requires-dist = [
     { name = "optuna", specifier = "==4.0.0" },
     { name = "pandas", specifier = ">=2.2.3" },
     { name = "pyarrow", specifier = "==17.0.0" },
+    { name = "pygad", specifier = ">=3.3.1" },
     { name = "scikit-learn", specifier = "==1.5.2" },
     { name = "seaborn", specifier = ">=0.13.2" },
     { name = "statsforecast", specifier = "==1.7.8" },
